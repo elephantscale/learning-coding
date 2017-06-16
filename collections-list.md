@@ -1,7 +1,9 @@
+<link rel='stylesheet' href='assets/css/main.css'/>
+
 # Collections / List
 
 ## Solutions
-[Python](answers/python/list-solution.ipynb)
+* [Python](answers/python/collections-list-solution.ipynb)
 
 ## Easy
 

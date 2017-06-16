@@ -1,3 +1,5 @@
+<link rel='stylesheet' href='assets/css/main.css'/>
+
 # learn2code
 A practical way to learn a language.
 
