@@ -32,15 +32,24 @@ combine 'hello' and 'world' , output => 'helloworld'
 
 ## Medium (B)
 
-### B1 - compute the hash functions md5 and sha1 of a string
+#### B1 - compute the hash functions md5 and sha1 of a string
 
-### B2 - tokenize / split string 'hello my world' into words
+#### B2 - tokenize / split string 'hello my world' into words
 
-### B3 - find the longest word in a sentence
+#### B3 - find the longest word in a sentence
 
-### B4 - find number of occurrences of string `s1` in string `s2`  
+#### B4 - find number of occurrences of string `s1` in string `s2`  
 For example, 'xx' occurs in string 'hello xx yy xxx xxxx' 4 times
 
-### B5 - swap comma(,) and dots(.) in a string
+#### B5 - swap comma(,) and dots(.) in a string
 input : "10,300,321.900.8"  
 output: "10.300.321,900,8"
+
+#### B6 - Strip all non alpha-num characters from a string
+input : 'hello123!#.'   
+output : 'hello123'
+
+#### B7 - Determine if String is a palindrome
+Ignore case and non-alpha chars (you can use the function you defined above).  
+e.g.  
+input = 'madam', reverse the string = 'madam' ,  is_palindrome = yes

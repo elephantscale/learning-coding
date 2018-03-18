@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>collections-map-solution</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>control-solution</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Collections---Map-:-Solutions">Collections - Map : Solutions<a class="anchor-link" href="#Collections---Map-:-Solutions">&#182;</a></h1>
+<h1 id="Control-Answer---Python">Control Answer - Python<a class="anchor-link" href="#Control-Answer---Python">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,7 +11783,23 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A1----Create-a-map-m1-with-following-contents">A1  - Create a map <code>m1</code> with following contents<a class="anchor-link" href="#A1----Create-a-map-m1-with-following-contents">&#182;</a></h3>
+<h2 id="If-Else">If-Else<a class="anchor-link" href="#If-Else">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h2><h3 id="Easy">Easy<a class="anchor-link" href="#Easy">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A1---write-a-for-loop-1-to-10">A1 - write a for loop 1 to 10<a class="anchor-link" href="#A1---write-a-for-loop-1-to-10">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11792,10 +11808,38 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11804,7 +11848,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A2---Loop-through-a-map-and-print-all-key-value-pairs">A2 - Loop through a map and print all key value pairs<a class="anchor-link" href="#A2---Loop-through-a-map-and-print-all-key-value-pairs">&#182;</a></h3>
+<h3 id="A2---write-a-for-loop-printing-1-to-10,-but-in-steps-of-2-(e.g.--1,-3,-5,-7,-9)">A2 - write a for loop printing 1 to 10, but in steps of 2 (e.g.  1, 3, 5, 7, 9)<a class="anchor-link" href="#A2---write-a-for-loop-printing-1-to-10,-but-in-steps-of-2-(e.g.--1,-3,-5,-7,-9)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11813,19 +11857,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">m1</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> -&gt; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m1</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">()</span>
-    
-<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">m1</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> -&gt; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using range </span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11842,20 +11876,11 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;a&#39;: 2, &#39;c&#39;: 5, &#39;b&#39;: 1, &#39;d&#39;: 3}
-
-dict_items([(&#39;a&#39;, 2), (&#39;c&#39;, 5), (&#39;b&#39;, 1), (&#39;d&#39;, 3)])
-
-a -&gt; 2
-c -&gt; 5
-b -&gt; 1
-d -&gt; 3
-
-a -&gt; 2
-c -&gt; 5
-b -&gt; 1
-d -&gt; 3
-
+<pre>1
+3
+5
+7
+9
 </pre>
 </div>
 </div>
@@ -11868,7 +11893,7 @@ d -&gt; 3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A3---given-a-key,-get-value">A3 - given a key, get value<a class="anchor-link" href="#A3---given-a-key,-get-value">&#182;</a></h3>
+<h3 id="A3----write-a-while-loop-1-to-10">A3 -  write a while loop 1 to 10<a class="anchor-link" href="#A3----write-a-while-loop-1-to-10">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11877,10 +11902,10 @@ d -&gt; 3
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use [key] or get(key)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 
 </div>
@@ -11897,9 +11922,16 @@ d -&gt; 3
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
+<pre>1
 2
-None
+3
+4
+5
+6
+7
+8
+9
+10
 </pre>
 </div>
 </div>
@@ -11912,7 +11944,7 @@ None
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A4---add-a-KV-to-map">A4 - add a KV to map<a class="anchor-link" href="#A4---add-a-KV-to-map">&#182;</a></h3>
+<h3 id="A4----write-a-while-loop-printing-1-to-10,-steps-of-2-(e.g.--1,-3,-5,-7,-9)">A4 -  write a while loop printing 1 to 10, steps of 2 (e.g.  1, 3, 5, 7, 9)<a class="anchor-link" href="#A4----write-a-while-loop-printing-1-to-10,-steps-of-2-(e.g.--1,-3,-5,-7,-9)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11921,8 +11953,10 @@ None
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m1</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
 
 </div>
@@ -11939,287 +11973,11 @@ None
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;a&#39;: 2, &#39;c&#39;: 5, &#39;b&#39;: 1, &#39;d&#39;: 3, &#39;e&#39;: 4}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A5---print-all-keys-of-a-map">A5 - print all keys of a map<a class="anchor-link" href="#A5---print-all-keys-of-a-map">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">m1</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>dict_keys([&#39;a&#39;, &#39;c&#39;, &#39;b&#39;, &#39;d&#39;, &#39;e&#39;])
-a
-c
-b
-d
-e
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A6---print-all-values-of-map">A6 - print all values of map<a class="anchor-link" href="#A6---print-all-values-of-map">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">m1</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>dict_values([2, 5, 1, 3, 4])
-2
-5
-1
+<pre>1
 3
-4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A7---print-a-map,-sorted-by-key">A7 - print a map, sorted by key<a class="anchor-link" href="#A7---print-a-map,-sorted-by-key">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> -&gt; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">m1</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>a -&gt; 2
-b -&gt; 1
-c -&gt; 5
-d -&gt; 3
-e -&gt; 4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A8---print-a-map-sorted-by-values-both-ascending-/-descending">A8 - print a map sorted by values both ascending / descending<a class="anchor-link" href="#A8---print-a-map-sorted-by-values-both-ascending-/-descending">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># returns a sorted list</span>
-<span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>  <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span>
-
-<span class="n">sorted_list_desc</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>  <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sorted_list_desc</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;b&#39;, 1), (&#39;a&#39;, 2), (&#39;d&#39;, 3), (&#39;e&#39;, 4), (&#39;c&#39;, 5)]
-[(&#39;c&#39;, 5), (&#39;e&#39;, 4), (&#39;d&#39;, 3), (&#39;a&#39;, 2), (&#39;b&#39;, 1)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A9---check-if-given-key-is-in-map">A9 - check if given key is in map<a class="anchor-link" href="#A9---check-if-given-key-is-in-map">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">m1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;key &#39;a&#39; exists&quot;</span><span class="p">)</span>
-    
-<span class="k">if</span> <span class="s1">&#39;x&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">m1</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;key &#39;x&#39; is not in map&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>key &#39;a&#39; exists
-key &#39;x&#39; is not in map
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A10---dictionary-with-default-value">A10 - dictionary with default value<a class="anchor-link" href="#A10---dictionary-with-default-value">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use get method</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">))</span>  <span class="c1"># existing</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">))</span>  <span class="c1"># non-existing</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># non-existing with default value</span>
-
-<span class="c1"># use defaultdict</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
-<span class="n">m2</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;default value&quot;</span><span class="p">)</span>
-<span class="n">m2</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-None
--1
-10
-default
+5
+7
+9
 </pre>
 </div>
 </div>
