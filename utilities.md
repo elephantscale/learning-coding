@@ -3,7 +3,8 @@
 # Utilities
 
 ## Solutions
-- [Python](answers/python/utilities-solution.ipynb)
+* Python: [Jupyter Notebook](answers/python/utilities-solution.ipynb)  || [HTML](answers/python/utilities-solution.html)
+
 
 ## Easy (A)
 * A1: generate a random number between 0 and 100

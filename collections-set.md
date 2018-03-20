@@ -3,7 +3,7 @@
 # Collections - Set
 
 ## Solutions
-* [Python](answers/python/collections-set-solution.ipynb)
+* Python: [Jupyter Notebook](answers/python/collections-set-solution.ipynb)  || [HTML](answers/python/collections-set-solution.html)
 
 ## Easy
 

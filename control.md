@@ -1,5 +1,9 @@
 # Control Statements
 
+## Answers
+- Python solution: [Jupyter Notebook](answers/python/control-solution.ipynb)  |  [HTML](answers/python/control-solution.html)
+
+
 ## If-Else
 
 ### Easy (A)

@@ -1,5 +1,8 @@
 # Language Basics
 
+## Solutions
+- Python solution : [Jupyter Notebook](answers/python/basics-solution.ipynb)  | [HTML](answers/python/basics-solution.html)
+
 ## Variable declaration
 
 ### A1: declare the following variables

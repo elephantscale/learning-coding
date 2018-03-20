@@ -1,4 +1,7 @@
 # Working With Files and Directories
+## Solutions
+* Python: [Jupyter Notebook](answers/python/files-and-directories-solution.ipynb)  || [HTML](answers/python/files-and-directories-solution.html)
+
 
 ## A - Easy
 

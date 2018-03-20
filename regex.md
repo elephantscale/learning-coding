@@ -1,5 +1,9 @@
 # Regular Expressions
 
+## Solutions
+* Python: [Jupyter Notebook](answers/python/regex-solution.ipynb)  || [HTML](answers/python/regex-solution.html)
+
+
 ## A - Easy
 
 ### A1: Determine if a string has any numbers in it?

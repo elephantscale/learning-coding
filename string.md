@@ -3,7 +3,8 @@
 # String
 
 ## Solutions
-- Python
+* Python: [Jupyter Notebook](answers/python/string-solution.ipynb)  || [HTML](answers/python/string-solution.html)
+
 
 ## Other References
 - http://www.w3resource.com/python-exercises/string/

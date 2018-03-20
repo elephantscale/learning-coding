@@ -5,7 +5,8 @@
 Map / Dictionaries
 
 ## Solutions
-* [Python](answers/python/collections-map-solution.ipynb)
+* Python: [Jupyter Notebook](answers/python/collections-map-solution.ipynb)  || [HTML](answers/python/collections-map-solution.html)
+
 
 ## Easy
 
