@@ -30,3 +30,20 @@ output: base name = letter,   extension = docx
 ### B3: List directory contents in alphabetical order (ignore case)
 
 ### B4: Print sizes of files in a directory
+
+### B5 : Print number of lines and length of a given file
+
+### B6 : Print number of lines for each file in a directory
+
+### B7: Calculate hashes (md5, sha1 and sha256) for a given file
+Extend this to calculate hashes for all files in a directory.  
+How well your code is working for large files (several gigs in size)?  
+You can generate some random file as follows (unix like systems)
+```
+    # this generates a 1G file
+    dd if="/dev/random" of="file" bs=1M count=1000
+```
+
+### B8: Identify duplicate files in a directory
+Files can arbitrarily large.  
+Hint : use the 'hash' solution above
