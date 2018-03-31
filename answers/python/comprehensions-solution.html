@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>utilities-solution</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>comprehensions-solution</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Utilities-Answer---Python">Utilities Answer - Python<a class="anchor-link" href="#Utilities-Answer---Python">&#182;</a></h1><h2 id="Easy">Easy<a class="anchor-link" href="#Easy">&#182;</a></h2>
+<h1 id="Comprehensions-Solution">Comprehensions Solution<a class="anchor-link" href="#Comprehensions-Solution">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A1---generate-a-random-number-between-1-and-100">A1 - generate a random number between 1 and 100<a class="anchor-link" href="#A1---generate-a-random-number-between-1-and-100">&#182;</a></h3>
+<h3 id="A1:-Extract-only-even-numbers-of-a-list-of-numbers-1..100">A1: Extract only even numbers of a list of numbers 1..100<a class="anchor-link" href="#A1:-Extract-only-even-numbers-of-a-list-of-numbers-1..100">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11792,9 +11792,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="nb">print</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11811,7 +11812,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>7
+<pre>range(1, 11)
+[2, 4, 6, 8, 10]
 </pre>
 </div>
 </div>
@@ -11824,7 +11826,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A2---generate-10-random-numbers-between-1-and-100">A2 - generate 10 random numbers between 1 and 100<a class="anchor-link" href="#A2---generate-10-random-numbers-between-1-and-100">&#182;</a></h3>
+<h3 id="A2-:-Given-an-array-of-birth-years,-create-an-array-of-ages">A2 : Given an array of birth years, create an array of ages<a class="anchor-link" href="#A2-:-Given-an-array-of-birth-years,-create-an-array-of-ages">&#182;</a></h3><p>current_year=2018
+[1994, 2000,1998, 1985] =&gt; [24, 18, 20, 33]</p>
+
 </div>
 </div>
 </div>
@@ -11833,10 +11837,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">current_year</span> <span class="o">=</span> <span class="mi">2018</span>
+<span class="n">birth_years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1994</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span><span class="mi">1998</span><span class="p">,</span> <span class="mi">1985</span><span class="p">]</span> 
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="n">current_year</span> <span class="o">-</span> <span class="n">by</span> <span class="k">for</span> <span class="n">by</span> <span class="ow">in</span> <span class="n">birth_years</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">birth_years</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11853,15 +11858,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1 86
-2 50
-3 9
-4 49
-5 14
-6 84
-7 49
-8 1
-9 7
+<pre>[1994, 2000, 1998, 1985]
+[24, 18, 20, 33]
 </pre>
 </div>
 </div>
@@ -11870,16 +11868,26 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A3-:-Given-two-lists-of-numbers-print-the--numbers-common-in-both-list">A3 : Given two lists of numbers print the  numbers common in both list<a class="anchor-link" href="#A3-:-Given-two-lists-of-numbers-print-the--numbers-common-in-both-list">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get some random numbers</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">common</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">b</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;common:&quot;</span><span class="p">,</span> <span class="n">common</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11896,56 +11904,9 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[86, 93, 31, 72, 13, 74, 90, 54, 82, 95, 31, 6, 8, 25, 29, 96, 33, 98, 79, 50, 24, 58, 19, 80, 65, 31, 22, 90, 75, 45, 73, 6, 74, 24, 43, 87, 10, 3, 93, 21, 81, 8, 6, 56, 52, 67, 64, 14, 15, 24, 76, 58, 47, 55, 79, 30, 87, 34, 64, 56, 8, 99, 55, 51, 1, 19, 82, 99, 7, 92, 88, 80, 19, 5, 65, 11, 26, 89, 81, 45, 2, 16, 66, 27, 71, 19, 15, 17, 2, 29, 80, 33, 45, 54, 79, 51, 58, 7, 35, 41]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="String">String<a class="anchor-link" href="#String">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="B1---compute-the-hash-functions-md5-and-sha1-of-a-string">B1 - compute the hash functions md5 and sha1 of a string<a class="anchor-link" href="#B1---compute-the-hash-functions-md5-and-sha1-of-a-string">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5eb63bbbe01eeed093cb22bb8f5acdc3
+<pre>[1, 2, 3, 5, 10]
+[1, 4, 5, 10, 12, 15]
+common: [1, 5, 10]
 </pre>
 </div>
 </div>

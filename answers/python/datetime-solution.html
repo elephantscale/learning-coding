@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>utilities-solution</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>datetime-solution</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Utilities-Answer---Python">Utilities Answer - Python<a class="anchor-link" href="#Utilities-Answer---Python">&#182;</a></h1><h2 id="Easy">Easy<a class="anchor-link" href="#Easy">&#182;</a></h2>
+<h1 id="Date-Time-Solutions">Date Time Solutions<a class="anchor-link" href="#Date-Time-Solutions">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A1---generate-a-random-number-between-1-and-100">A1 - generate a random number between 1 and 100<a class="anchor-link" href="#A1---generate-a-random-number-between-1-and-100">&#182;</a></h3>
+<h3 id="A1-:-get-'elapsed-time'-since-epoch">A1 : get 'elapsed time' since epoch<a class="anchor-link" href="#A1-:-get-'elapsed-time'-since-epoch">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11792,9 +11792,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="nb">print</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -11811,7 +11810,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>7
+<pre>1522533450.318413
 </pre>
 </div>
 </div>
@@ -11824,7 +11823,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A2---generate-10-random-numbers-between-1-and-100">A2 - generate 10 random numbers between 1 and 100<a class="anchor-link" href="#A2---generate-10-random-numbers-between-1-and-100">&#182;</a></h3>
+<h3 id="A2:-Write-a-Python-script-to-display-the-following">A2: Write a Python script to display the following<a class="anchor-link" href="#A2:-Write-a-Python-script-to-display-the-following">&#182;</a></h3><ul>
+<li>Current date and time</li>
+<li>Current year</li>
+<li>Month of year</li>
+<li>Week number of the year</li>
+<li>Weekday of the week</li>
+<li>Day of year</li>
+<li>Day of the month</li>
+<li>Day of week</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -11833,10 +11842,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># we are using python time tuple </span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">time</span><span class="p">;</span>
+
+<span class="n">localtime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Local current time :&quot;</span><span class="p">,</span> <span class="n">localtime</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11853,15 +11864,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1 86
-2 50
-3 9
-4 49
-5 14
-6 84
-7 49
-8 1
-9 7
+<pre>Local current time : time.struct_time(tm_year=2018, tm_mon=3, tm_mday=31, tm_hour=14, tm_min=57, tm_sec=30, tm_wday=5, tm_yday=90, tm_isdst=1)
 </pre>
 </div>
 </div>
@@ -11875,11 +11878,15 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get some random numbers</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current year: &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Month of year: &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%B&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Week number of the year: &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%W&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weekday of the week: &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%w&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Day of year: &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%j&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Day of the month : &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Day of week: &quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11896,7 +11903,13 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[86, 93, 31, 72, 13, 74, 90, 54, 82, 95, 31, 6, 8, 25, 29, 96, 33, 98, 79, 50, 24, 58, 19, 80, 65, 31, 22, 90, 75, 45, 73, 6, 74, 24, 43, 87, 10, 3, 93, 21, 81, 8, 6, 56, 52, 67, 64, 14, 15, 24, 76, 58, 47, 55, 79, 30, 87, 34, 64, 56, 8, 99, 55, 51, 1, 19, 82, 99, 7, 92, 88, 80, 19, 5, 65, 11, 26, 89, 81, 45, 2, 16, 66, 27, 71, 19, 15, 17, 2, 29, 80, 33, 45, 54, 79, 51, 58, 7, 35, 41]
+<pre>Current year:  2018
+Month of year:  March
+Week number of the year:  13
+Weekday of the week:  6
+Day of year:  090
+Day of the month :  31
+Day of week:  Saturday
 </pre>
 </div>
 </div>
@@ -11909,15 +11922,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="String">String<a class="anchor-link" href="#String">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="B1---compute-the-hash-functions-md5-and-sha1-of-a-string">B1 - compute the hash functions md5 and sha1 of a string<a class="anchor-link" href="#B1---compute-the-hash-functions-md5-and-sha1-of-a-string">&#182;</a></h3>
+<h3 id="A3-:-Display-current-date-in-this-format">A3 : Display current date in this format<a class="anchor-link" href="#A3-:-Display-current-date-in-this-format">&#182;</a></h3><p>2018--March--30::14:23:30<br>
+yyyy--Month--date::hr:min:seconds</p>
+
 </div>
 </div>
 </div>
@@ -11926,9 +11933,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current date and time: &quot;</span> <span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Or like this: &quot;</span> <span class="p">,</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y--%b--</span><span class="si">%d</span><span class="s2">::%H:%M:%S&quot;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11945,7 +11953,182 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>5eb63bbbe01eeed093cb22bb8f5acdc3
+<pre>Current date and time:  2018-03-31 14:57:30.353105
+Or like this:  2018--Mar--31::14:57:30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.datetime(2018, 3, 31, 14, 57, 30, 364946)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A4-:-convert-a-string-to-datetime">A4 : convert a string to datetime<a class="anchor-link" href="#A4-:-convert-a-string-to-datetime">&#182;</a></h3><p>Input: Jun 1 2014 2:43PM<br>
+Expected Output : 2014-07-01 14:43:00</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># date formats : https://docs.python.org/3/library/datetime.html#datetime.datetime.strptime</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">date_str</span> <span class="o">=</span> <span class="s2">&quot;Jun 01 2014 2:43PM&quot;</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1"> %Y %H:%M%p&#39;</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;input date :&quot;</span><span class="p">,</span> <span class="n">date_str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;converted date :&quot;</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>input date : Jun 01 2014 2:43PM
+converted date : 2014-06-01 02:43:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A5-:-Find-out-what-day-of-the-week-(mon,-tue,-wed-..etc)-you-were-born">A5 : Find out what day of the week (mon, tue, wed ..etc) you were born<a class="anchor-link" href="#A5-:-Find-out-what-day-of-the-week-(mon,-tue,-wed-..etc)-you-were-born">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># date formats : https://docs.python.org/3/library/datetime.html#datetime.datetime.strptime</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">birthday</span> <span class="o">=</span> <span class="s2">&quot;Apr 1, 2000&quot;</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">birthday</span><span class="p">,</span> <span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1">, %Y&#39;</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;input date :&quot;</span><span class="p">,</span> <span class="n">birthday</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>input date : Apr 1, 2000
+1
+Saturday
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A6-:-convert-unix-timestamp-to-human-readable-date">A6 : convert unix timestamp to human readable date<a class="anchor-link" href="#A6-:-convert-unix-timestamp-to-human-readable-date">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1522535678</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018-03-31 15:34:38
 </pre>
 </div>
 </div>

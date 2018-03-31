@@ -35,4 +35,6 @@ Find common elements in set `a` and `b`
 - Create a list of 50 random numbers between 1 and 100 (including).  
 - print only unique numbers from the list, eliminating duplicates
 
+#### B5 : Get the frequency of the elements in a list.
+
 ## Hard (C)
