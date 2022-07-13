@@ -33,16 +33,37 @@ combine 'hello' and 'world' , output => 'helloworld'
 
 ## Medium (B)
 
-#### B1 - compute the hash functions md5 and sha1 of a string
+### B1 - compute the hash functions md5 and sha1 of a string
 
-#### B2 - tokenize / split string 'hello my world' into words
+### B2 - Tokenize a sentence into words
 
-#### B3 - find the longest word in a sentence
+```code
+"I love Java";
+```
 
-#### B4 - find number of occurrences of string `s1` in string `s2`  
+The above sentence should be split into 3 words : `I,  love, Java`
+
+How about if the sentence has multiple spaces 
+
+```text
+"I        love Java";
+```
+
+Will your code work?
+
+#### Hints:
+
+* Look at `String.split` function.
+* Delimiter can be a regex: `\\s` - signifies a whitespace (space, tab, newlie ..etc)
+
+### B3 - find the longest word in a sentence
+
+### B4 - find number of occurrences of string `s1` in string `s2`  
+
 For example, 'xx' occurs in string 'hello xx yy xxx xxxx' 4 times
 
-#### B5 - swap comma(,) and dots(.) in a string
+### B5 - swap comma(,) and dots(.) in a string
+
 input : "10,300,321.900.8"  
 output: "10.300.321,900,8"
 
