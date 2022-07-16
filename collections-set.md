@@ -37,4 +37,18 @@ Find common elements in set `a` and `b`
 
 #### B5 : Get the frequency of the elements in a list.
 
+### B6 - WordCount
+
+Grab some text from a random wikipedia text and count word frequency.
+
+You can declare a multiline string like this
+
+```text
+s = """
+line 1
+line 2
+line 3
+"""
+```
+
 ## Hard (C)
